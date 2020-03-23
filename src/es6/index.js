@@ -122,3 +122,25 @@ const helloPromise = () => {
 helloPromise()
   .then(response => console.log(response))
   .catch(error => console.error(error))
+  
+//!classes
+class calculator {
+  constructor() {
+    this.valueA = 0
+    this.valueB = 0
+  }
+  
+  sum(a, b) {
+    this.valueA = a
+    this.valueB = b
+    return this.valueA + this.valueB
+  }
+}
+
+const calc = new calculator()
+console.log('calc', calc.sum(2,2))
+
+//!modulos
+import { hello } from './module'
+
+console.log(hello())
