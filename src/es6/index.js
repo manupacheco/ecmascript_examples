@@ -124,7 +124,7 @@ helloPromise()
   .catch(error => console.error(error))
   
 //!classes
-class calculator {
+class Calculator {
   constructor() {
     this.valueA = 0
     this.valueB = 0
@@ -137,10 +137,25 @@ class calculator {
   }
 }
 
-const calc = new calculator()
+const calc = new Calculator()
 console.log('calc', calc.sum(2,2))
 
 //!modulos
 import { hello } from './module'
 
 console.log(hello())
+
+//!generator
+function* helloWolrd() {
+  if (true) {
+    yield 'Hello, '
+  }
+  if (true) {
+    yield 'World'
+  }
+}
+
+const generetorHello = helloWolrd()
+console.log(generetorHello.next().value)
+console.log(generetorHello.next().value)
+console.log(generetorHello.next().value)
